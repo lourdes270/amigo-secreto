@@ -13,7 +13,6 @@
     --fuente-primaria: 'Inter', sans-serif;
 }
 
-
 body {
     font-family: var(--fuente-primaria);
     background-color: var(--color-fondo);
@@ -23,7 +22,6 @@ body {
     padding: 0;
 }
 
-
 .main-content {
     max-width: 600px;
     margin: 20px auto;
@@ -31,24 +29,6 @@ body {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 🏆 Encabezado */
-.header-banner {
-    text-align: center;
-}
-
-.main-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-texto);
-    margin-bottom: 10px;
-}
-
-.header-banner img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
 }
 
 .input-section {
@@ -91,6 +71,7 @@ body {
     background-color: var(--color-primario-hover);
 }
 
+
 .name-list {
     list-style: none;
     padding: 0;
@@ -100,7 +81,7 @@ body {
 .name-list li {
     background: var(--color-lista);
     padding: 10px;
-    margin: 5px 0;
+    margin: 8px 0;
     border-radius: 5px;
     font-size: 1.1rem;
     display: flex;
@@ -108,33 +89,19 @@ body {
     align-items: center;
 }
 
-.button-container {
-    margin-top: 20px;
-}
-
-.button-draw {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-boton-sortear);
-    color: white;
+.btn-delete {
+    margin-left: 10px;
+    background: none;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
+    color: var(--color-error);
     font-size: 1rem;
-    transition: background 0.3s ease;
+    cursor: pointer;
 }
 
-.button-draw img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+.btn-delete:hover {
+    color: #ff0000;
 }
 
-.button-draw:hover {
-    background-color: var(--color-boton-sortear-hover);
-}
 
 .result-list {
     list-style: none;
@@ -151,41 +118,6 @@ body {
     font-weight: bold;
 }
 
-#mensaje {
-    font-size: 1rem;
-    margin-top: 10px;
-    padding: 8px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.error {
-    color: var(--color-error);
-    background: #f8d7da;
-}
-
-.success {
-    color: var(--color-success);
-    background: #d4edda;
-}
-
-.info {
-    color: var(--color-info);
-    background: #d1ecf1;
-}
-
-.btn-delete {
-    margin-left: 10px;
-    background: none;
-    border: none;
-    color: var(--color-error);
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.btn-delete:hover {
-    color: #ff0000;
-}
 
 @media (max-width: 768px) {
     .main-content {
@@ -197,15 +129,7 @@ body {
         flex-direction: column;
     }
 
-    .input-name {
-        width: 100%;
-    }
-
-    .button-add {
-        width: 100%;
-    }
-
-    .button-draw {
+    .input-name, .button-add, .button-draw {
         width: 100%;
     }
 }
