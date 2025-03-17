@@ -1,162 +1,176 @@
+/* 🌿 Definición de variables de color y tipografía */
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --color-primario: #007bff;
+    --color-primario-hover: #0056b3;
+    --color-boton-sortear: #28a745;
+    --color-boton-sortear-hover: #218838;
+    --color-lista: #e9ecef;
+    --color-resultado: #ffc107;
+    --fuente-primaria: 'Inter', sans-serif;
 }
 
-/* Estilos generales */
-* {
+/* 🎨 Estilos globales */
+body {
+    font-family: var(--fuente-primaria);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* 📌 Contenedor principal */
 .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-/* Banner */
-.header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
-}
-
-/* Sección de entrada */
-.input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Títulos */
-.main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
-}
-
-.section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
+/* 🏆 Encabezado */
+.header-banner {
     text-align: center;
 }
 
-/* Contenedores de entrada y botón */
-.input-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
+.main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+.header-banner img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* 📝 Sección de ingreso de nombres */
+.input-section {
     margin-top: 20px;
 }
 
-.input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
+.section-title {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    margin-bottom: 10px;
 }
 
-.button-container {
-    width: 300px;
+/* ✍ Input y botón de agregar */
+.input-wrapper {
+    display: flex;
     justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos de botón */
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+.input-name {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-primario-hover);
 }
 
-/* Listas */
-ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
+/* 📃 Lista de amigos */
+.name-list {
+    list-style: none;
+    padding: 0;
     margin: 20px 0;
 }
 
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+.name-list li {
+    background: var(--color-lista);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1.1rem;
 }
 
-/* Botón de sortear título */
+/* 🎲 Botón de sorteo */
+.button-container {
+    margin-top: 20px;
+}
+
 .button-draw {
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
+    justify-content: center;
+    background-color: var(--color-boton-sortear);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
 }
 
 .button-draw img {
-    margin-right: 40px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 .button-draw:hover {
-    background-color: var(--color-button-hover);
+    background-color: var(--color-boton-sortear-hover);
+}
+
+/* 🎁 Lista de resultados */
+.result-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.result-list li {
+    background: var(--color-resultado);
+    color: var(--color-texto);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* 📱 Diseño responsivo */
+@media (max-width: 768px) {
+    .main-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .input-name {
+        width: 100%;
+    }
+
+    .button-add {
+        width: 100%;
+    }
+
+    .button-draw {
+        width: 100%;
+    }
 }
