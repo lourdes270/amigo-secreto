@@ -1,4 +1,3 @@
-/* 🌿 Definición de variables de color y tipografía */
 :root {
     --color-fondo: #f8f9fa;
     --color-texto: #333;
@@ -8,10 +7,13 @@
     --color-boton-sortear-hover: #218838;
     --color-lista: #e9ecef;
     --color-resultado: #ffc107;
+    --color-error: #b22222;
+    --color-success: #155724;
+    --color-info: #0c5460;
     --fuente-primaria: 'Inter', sans-serif;
 }
 
-/* 🎨 Estilos globales */
+
 body {
     font-family: var(--fuente-primaria);
     background-color: var(--color-fondo);
@@ -21,7 +23,7 @@ body {
     padding: 0;
 }
 
-/* 📌 Contenedor principal */
+
 .main-content {
     max-width: 600px;
     margin: 20px auto;
@@ -49,7 +51,6 @@ body {
     margin-top: 10px;
 }
 
-/* 📝 Sección de ingreso de nombres */
 .input-section {
     margin-top: 20px;
 }
@@ -60,7 +61,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* ✍ Input y botón de agregar */
 .input-wrapper {
     display: flex;
     justify-content: center;
@@ -91,7 +91,6 @@ body {
     background-color: var(--color-primario-hover);
 }
 
-/* 📃 Lista de amigos */
 .name-list {
     list-style: none;
     padding: 0;
@@ -104,9 +103,11 @@ body {
     margin: 5px 0;
     border-radius: 5px;
     font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* 🎲 Botón de sorteo */
 .button-container {
     margin-top: 20px;
 }
@@ -135,7 +136,6 @@ body {
     background-color: var(--color-boton-sortear-hover);
 }
 
-/* 🎁 Lista de resultados */
 .result-list {
     list-style: none;
     padding: 0;
@@ -151,7 +151,42 @@ body {
     font-weight: bold;
 }
 
-/* 📱 Diseño responsivo */
+#mensaje {
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.error {
+    color: var(--color-error);
+    background: #f8d7da;
+}
+
+.success {
+    color: var(--color-success);
+    background: #d4edda;
+}
+
+.info {
+    color: var(--color-info);
+    background: #d1ecf1;
+}
+
+.btn-delete {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    color: var(--color-error);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    color: #ff0000;
+}
+
 @media (max-width: 768px) {
     .main-content {
         width: 90%;
